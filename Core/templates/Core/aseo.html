@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %} 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Inventario</title>
+    <link rel="stylesheet" href="{% static 'Core/css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <div class="banner">
+            <h1>Bienvenido al Gestor de Inventario</h1>
+        </div>
+
+        <div class="container container--flex">
+            <a href="/" class="logo">
+                <img src="{% static 'Core/img/Logo2.png' %}" alt="Logo" class="logo__image">
+            </a>
+            <span class="icon-menu" id="btnmenu"></span>
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="/" class="menu__link menu__link--select">Inicio</a></li>
+                <li class="menu__item"><a href="aseo/" class="menu__link">Aseo</a></li>
+                <li class="menu__item"><a href="profesores/" class="menu__link">Profesores</a></li>
+                <li class="menu__item"><a href="computacion/" class="menu__link">Computacion</a></li>
+                <!-- Aquí se coloca el enlace de cerrar sesión dentro de un <li> -->
+                    <form action="{% url 'Logout' %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="logout__button">Cerrar Sesión</button>
+                    </form>
+            </ul>
+            <!-- Esta wea no se ve reflejada en el codigo, no lo saques ya que hace que las categorias esten centradas -->
+            <div class="social-icon">
+                <a href="https://www.facebook.com/Treyarch/?locale=es_LA" class="social-icon__link"><span class="icon-facebook"></span></a>
+                <a href="https://x.com/Treyarch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/treyarch/" class="social-icon__link"><span class="icon-instagram"></span></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="slots">
+            <div class="slot">
+                <img src="{% static 'img/item.jpg' %}" alt="Item 1" class="slot__image">
+                <div class="slot__controls">
+                    <button class="slot__button" onclick="decreaseValue('count1')">-</button>
+                    <span id="count1" class="slot__count">0</span>
+                    <button class="slot__button" onclick="increaseValue('count1')">+</button>
+                </div>
+            </div>
+            <div class="slot">
+                <img src="{% static 'img/logo.jpg' %}" alt="Item 2" class="slot__image">
+                <div class="slot__controls">
+                    <button class="slot__button" onclick="decreaseValue('count2')">-</button>
+                    <span id="count2" class="slot__count">0</span>
+                    <button class="slot__button" onclick="increaseValue('count2')">+</button>
+                </div>
+            </div>
+            <!-- Agrega más ranuras aquí -->
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Inventario Escolar</p>
+    </footer>
+</body>
+</html>
