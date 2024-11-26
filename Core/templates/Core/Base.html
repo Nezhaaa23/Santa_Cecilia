@@ -23,7 +23,6 @@
                 <li class="menu__item"><a href="nosotros/" class="menu__link">Aseo</a></li>
                 <li class="menu__item"><a href="gallery/" class="menu__link">Profesores</a></li>
                 <li class="menu__item"><a href="contact/" class="menu__link">Computacion</a></li>
-                <!-- Aquí se coloca el enlace de cerrar sesión dentro de un <li> -->
                     <form action="{% url 'Logout' %}" method="POST">
                         {% csrf_token %}
                         <button type="submit" class="logout__button">Cerrar Sesión</button>
