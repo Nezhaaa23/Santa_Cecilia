@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión
 LOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión
 

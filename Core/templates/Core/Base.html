@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -14,27 +13,29 @@
             <h1>Bienvenido al Gestor de Inventario</h1>
         </div>
 
-        
-            <div class="container container--flex">
-                <a href="/" class="logo">
-                    <img src="{% static 'Core/img/Logo2.png' %}" alt="Logo" class="logo__image">
-                </a>
-                <span class="icon-menu" id="btnmenu"></span>
-                <ul class="menu" id="menu">
-                    <li class="menu__item"><a href="/" class="menu__link menu__link--select">Inicio</a></li>
-                    <li class="menu__item"><a href="nosotros/" class="menu__link">Aseo</a></li>
-                    <li class="menu__item"><a href="gallery/" class="menu__link">Profesores</a></li>
-                    <li class="menu__item"><a href="contact/" class="menu__link">Computacion</a></li>
-                </ul>
-                <!-- Esta wea no se ve reflejada en el codigo, no lo saques ya que hace que las categorias esten centradas -->
-                <div class="social-icon">
-                    <a href="https://www.facebook.com/Treyarch/?locale=es_LA" class="social-icon__link"><span class="icon-facebook"></span></a>
-                    <a href="https://x.com/Treyarch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon__link"><span class="icon-twitter"></span></a>
-                    <a href="https://www.instagram.com/treyarch/" class="social-icon__link"><span class="icon-instagram"></span></a>
-                </div>
+        <div class="container container--flex">
+            <a href="/" class="logo">
+                <img src="{% static 'Core/img/Logo2.png' %}" alt="Logo" class="logo__image">
+            </a>
+            <span class="icon-menu" id="btnmenu"></span>
+            <ul class="menu" id="menu">
+                <li class="menu__item"><a href="/" class="menu__link menu__link--select">Inicio</a></li>
+                <li class="menu__item"><a href="nosotros/" class="menu__link">Aseo</a></li>
+                <li class="menu__item"><a href="gallery/" class="menu__link">Profesores</a></li>
+                <li class="menu__item"><a href="contact/" class="menu__link">Computacion</a></li>
+                <!-- Aquí se coloca el enlace de cerrar sesión dentro de un <li> -->
+                    <form action="{% url 'Logout' %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="logout__button">Cerrar Sesión</button>
+                    </form>
+            </ul>
+            <!-- Esta wea no se ve reflejada en el codigo, no lo saques ya que hace que las categorias esten centradas -->
+            <div class="social-icon">
+                <a href="https://www.facebook.com/Treyarch/?locale=es_LA" class="social-icon__link"><span class="icon-facebook"></span></a>
+                <a href="https://x.com/Treyarch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon__link"><span class="icon-twitter"></span></a>
+                <a href="https://www.instagram.com/treyarch/" class="social-icon__link"><span class="icon-instagram"></span></a>
             </div>
-        
-        
+        </div>
     </header>
     <main>
         <section class="slots">
