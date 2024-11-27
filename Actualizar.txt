@@ -1,0 +1,7 @@
+3 botones de Crear modificar y borrar 
+1 por cada pagina (aseo,computacion,profesores)
+Listado de BD
+Sistema de notificaciones a traves de correo
+
+CSS
+Arreglar fallos con css botones generales (header)

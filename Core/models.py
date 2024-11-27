@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 from django.db import models
-
+    
 class Computacion(models.Model):
     id_material = models.AutoField(primary_key=True)
     nombre_material = models.CharField(max_length=255)

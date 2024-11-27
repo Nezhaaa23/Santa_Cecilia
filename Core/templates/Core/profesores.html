@@ -19,15 +19,20 @@
             </a>
             <span class="icon-menu" id="btnmenu"></span>
             <ul class="menu" id="menu">
-                <li class="menu__item"><a href="/" class="menu__link menu__link--select">Inicio</a></li>
-                <li class="menu__item"><a href="nosotros/" class="menu__link">Aseo</a></li>
-                <li class="menu__item"><a href="gallery/" class="menu__link">Profesores</a></li>
-                <li class="menu__item"><a href="contact/" class="menu__link">Computacion</a></li>
-                <!-- Aquí se coloca el enlace de cerrar sesión dentro de un <li> -->
-                    <form action="{% url 'Logout' %}" method="POST">
-                        {% csrf_token %}
-                        <button type="submit" class="logout__button">Cerrar Sesión</button>
-                    </form>
+                <li class="menu__item"><a href="{% url 'Base' %}" class="menu__link menu__link--select">Inicio</a></li>
+                {% if perms.Core.view_aseo %}
+                <li class="menu__item"><a href="{% url 'aseo' %}" class="menu__link">Aseo</a></li>
+                {% endif %}
+                {% if perms.Core.view_profesores %}
+                <li class="menu__item"><a href="{% url 'profesores' %}" class="menu__link">Profesores</a></li>
+                {% endif %}
+                {% if perms.Core.view_computacion %}
+                <li class="menu__item"><a href="{% url  'computacion' %}" class="menu__link">Computación</a></li>
+                {% endif %}
+                <form action="{% url 'Logout' %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="logout__button">Cerrar Sesión</button>
+                </form>
             </ul>
             <!-- Esta wea no se ve reflejada en el codigo, no lo saques ya que hace que las categorias esten centradas -->
             <div class="social-icon">
