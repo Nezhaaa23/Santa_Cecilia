@@ -43,28 +43,26 @@
         </div>
     </header>
     <main>
-            <a href="{% url 'agregar' %}">
-                <button class="btn btn-blue">Agregar Producto</button>
+            <a href="{% url 'agregar' %}" class="floating-btn">
+                <button class="custom-btn">Agregar Producto</button>
             </a>
-        <section class="slots">
-            <div class="slot">
-                <img src="{% static 'img/item.jpg' %}" alt="Item 1" class="slot__image">
-                <div class="slot__controls">
-                    <button class="slot__button" onclick="decreaseValue('count1')">-</button>
-                    <span id="count1" class="slot__count">0</span>
-                    <button class="slot__button" onclick="increaseValue('count1')">+</button>
-                </div>
-            </div>
-            <div class="slot">
-                <img src="{% static 'img/logo.jpg' %}" alt="Item 2" class="slot__image">
-                <div class="slot__controls">
-                    <button class="slot__button" onclick="decreaseValue('count2')">-</button>
-                    <span id="count2" class="slot__count">0</span>
-                    <button class="slot__button" onclick="increaseValue('count2')">+</button>
-                </div>
-            </div>
-            <!-- Agrega más ranuras aquí -->
-        </section>
+            <section class="slots">
+                {% for producto in productos %}
+                    <div class="producto-item">
+                        <p><strong>Nombre:</strong> {{ producto.nombre_material }}</p>
+                        <p><strong>Tipo:</strong> {{ producto.tipo_material }}</p>
+                        <p>
+                        <strong>Cantidad:</strong> {{ producto.cantidad_material }}
+                        <button class="slot__button" onclick="increaseValue('count1')">+</button>
+                        <button class="slot__button" onclick="decreaseValue('count1')">-</button>
+                        </p>
+                        <a href="{% url 'modificar' id=producto.id_material %}" class="btn btn-info btn-sm">Modificar</a>
+                        <a href="{% url 'eliminar' id=producto.id_material %}" class="btn btn-danger">Eliminar</a>
+                    </div>
+                {% empty %}
+                    <p>No hay productos disponibles.</p>
+                {% endfor %}
+            </section>
     </main>
     <footer>
         <p>© 2024 Inventario Escolar</p>

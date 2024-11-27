@@ -43,24 +43,25 @@
         </div>
     </header>
     <main>
+        <a href="{% url 'agregarA' %}" class="floating-btn">
+            <button class="custom-btn">Agregar Producto</button>
+        </a>
         <section class="slots">
-            <div class="slot">
-                <img src="{% static 'img/item.jpg' %}" alt="Item 1" class="slot__image">
-                <div class="slot__controls">
-                    <button class="slot__button" onclick="decreaseValue('count1')">-</button>
-                    <span id="count1" class="slot__count">0</span>
+            {% for producto in productos %}
+                <div class="producto-item">
+                    <p><strong>Nombre:</strong> {{ producto.nombre_insumo }}</p>
+                    <p><strong>Tipo:</strong> {{ producto.tipo_insumo }}</p>
+                    <p>
+                    <strong>Cantidad:</strong> {{ producto.cantidad_insumo }}
                     <button class="slot__button" onclick="increaseValue('count1')">+</button>
+                    <button class="slot__button" onclick="decreaseValue('count1')">-</button>
+                    </p>
+                    <a href="{% url 'modificarA' id=producto.id_insumo %}" class="btn btn-info btn-sm">Modificar</a>
+                    <a href="{% url 'eliminarA' id=producto.id_insumo %}" class="btn btn-danger">Eliminar</a>
                 </div>
-            </div>
-            <div class="slot">
-                <img src="{% static 'img/logo.jpg' %}" alt="Item 2" class="slot__image">
-                <div class="slot__controls">
-                    <button class="slot__button" onclick="decreaseValue('count2')">-</button>
-                    <span id="count2" class="slot__count">0</span>
-                    <button class="slot__button" onclick="increaseValue('count2')">+</button>
-                </div>
-            </div>
-            <!-- Agrega más ranuras aquí -->
+            {% empty %}
+                <p>No hay productos disponibles.</p>
+            {% endfor %}
         </section>
     </main>
     <footer>

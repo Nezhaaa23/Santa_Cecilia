@@ -231,3 +231,67 @@ header {
 .agregar-producto .btn:hover {
     background-color: #0056b3;  
 }
+
+/* Estilo general para la lista de productos */
+.producto-item {
+    border: 1px solid #ddd; /* Borde del producto */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espaciado entre productos */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.producto-item p {
+    font-size: 16px; /* Tamaño de la fuente */
+    margin: 5px 0; /* Espaciado entre las líneas */
+}
+
+/* Resaltar los títulos */
+.producto-item strong {
+    color: #333; /* Color de texto para los títulos */
+}
+
+/* Estilo para los botones */
+.producto-item .btn {
+    text-decoration: none; /* Quitar subrayado */
+    display: inline-block; /* Alinear los botones */
+    padding: 8px 15px; /* Espaciado dentro de los botones */
+    margin-top: 10px; /* Separación entre botones y texto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.producto-item .btn-info {
+    background-color: #5bc0de; /* Color azul claro para 'Modificar' */
+    color: white; /* Texto blanco */
+}
+
+.producto-item .btn-info:hover {
+    background-color: #31b0d5; /* Color al pasar el mouse */
+}
+
+.producto-item .btn-danger {
+    background-color: #d9534f; /* Color rojo para 'Eliminar' */
+    color: white; /* Texto blanco */
+}
+
+.producto-item .btn-danger:hover {
+    background-color: #c9302c; /* Color al pasar el mouse */
+}
+
+
+.floating-btn {
+    position: absolute; 
+    right: 20px; 
+    top: 20px; 
+}
+
+.custom-btn {
+    font-size: 1.2rem; 
+    padding: 10px 20px; 
+    border: 2px solid green; 
+    border-radius: 5px; 
+    background-color: green; 
+    color: white; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
