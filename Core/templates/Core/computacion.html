@@ -1,71 +1,25 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    {% load static %} 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Inventario</title>
-    <link rel="stylesheet" href="{% static 'Core/css/styles.css' %}">
-</head>
-<body>
-    <header>
-        <div class="banner">
-            <h1>Bienvenido al Gestor de Inventario</h1>
-        </div>
+{% extends 'Core/Base.html' %}
+{% block contenido %}
 
-        <div class="container container--flex">
-            <a href="/" class="logo">
-                <img src="{% static 'Core/img/Logo2.png' %}" alt="Logo" class="logo__image">
-            </a>
-            <span class="icon-menu" id="btnmenu"></span>
-            <ul class="menu" id="menu">
-                <li class="menu__item"><a href="{% url 'Base' %}" class="menu__link menu__link--select">Inicio</a></li>
-                {% if perms.Core.view_aseo %}
-                <li class="menu__item"><a href="{% url 'aseo' %}" class="menu__link">Aseo</a></li>
-                {% endif %}
-                {% if perms.Core.view_profesores %}
-                <li class="menu__item"><a href="{% url 'profesores' %}" class="menu__link">Profesores</a></li>
-                {% endif %}
-                {% if perms.Core.view_computacion %}
-                <li class="menu__item"><a href="{% url  'computacion' %}" class="menu__link">Computación</a></li>
-                {% endif %}
-                <form action="{% url 'Logout' %}" method="POST">
-                    {% csrf_token %}
-                    <button type="submit" class="logout__button">Cerrar Sesión</button>
-                </form>
-            </ul>
-            <!-- Esta wea no se ve reflejada en el codigo, no lo saques ya que hace que las categorias esten centradas -->
-            <div class="social-icon">
-                <a href="https://www.facebook.com/Treyarch/?locale=es_LA" class="social-icon__link"><span class="icon-facebook"></span></a>
-                <a href="https://x.com/Treyarch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon__link"><span class="icon-twitter"></span></a>
-                <a href="https://www.instagram.com/treyarch/" class="social-icon__link"><span class="icon-instagram"></span></a>
-            </div>
+<a href="{% url 'agregar' %}" class="floating-btn">
+    <button class="custom-btn">Agregar Producto</button>
+</a>
+<section class="slots">
+    {% for producto in productos %}
+        <div class="producto-item">
+            <p><strong>Nombre:</strong> {{ producto.nombre_material }}</p>
+            <p><strong>Tipo:</strong> {{ producto.tipo_material }}</p>
+            <p>
+            <strong>Cantidad:</strong> {{ producto.cantidad_material }}
+            <button class="slot__button" onclick="increaseValue('count1')">+</button>
+            <button class="slot__button" onclick="decreaseValue('count1')">-</button>
+            </p>
+            <a href="{% url 'modificar' id=producto.id_material %}" class="btn btn-info btn-sm">Modificar</a>
+            <a href="{% url 'eliminar' id=producto.id_material %}" class="btn btn-danger">Eliminar</a>
         </div>
-    </header>
-    <main>
-            <a href="{% url 'agregar' %}" class="floating-btn">
-                <button class="custom-btn">Agregar Producto</button>
-            </a>
-            <section class="slots">
-                {% for producto in productos %}
-                    <div class="producto-item">
-                        <p><strong>Nombre:</strong> {{ producto.nombre_material }}</p>
-                        <p><strong>Tipo:</strong> {{ producto.tipo_material }}</p>
-                        <p>
-                        <strong>Cantidad:</strong> {{ producto.cantidad_material }}
-                        <button class="slot__button" onclick="increaseValue('count1')">+</button>
-                        <button class="slot__button" onclick="decreaseValue('count1')">-</button>
-                        </p>
-                        <a href="{% url 'modificar' id=producto.id_material %}" class="btn btn-info btn-sm">Modificar</a>
-                        <a href="{% url 'eliminar' id=producto.id_material %}" class="btn btn-danger">Eliminar</a>
-                    </div>
-                {% empty %}
-                    <p>No hay productos disponibles.</p>
-                {% endfor %}
-            </section>
-    </main>
-    <footer>
-        <p>© 2024 Inventario Escolar</p>
-    </footer>
-</body>
-</html>
+    {% empty %}
+        <p>No hay productos disponibles.</p>
+    {% endfor %}
+</section>
+
+{% endblock %}

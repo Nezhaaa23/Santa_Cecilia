@@ -1,12 +1,20 @@
-<div class="card">
-    <div class="card-body">
-        <form action="" method="post" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{form}}
-            <div class="d-flex justify-content-center">
-            <input type="reset" value="Cancelar" class="btn btn-secondary">
-            <input type="submit" value="Guardar" class="btn btn-primary">
-            </div>
-        </form>
+{% extends 'Core/Base.html' %}
+{% block contenido %}
+
+<section class="slots">
+    <div class="card">
+        <div class="card-body">
+            <form action="" method="post" enctype="multipart/form-data" class="form-centered">
+                {% csrf_token %}
+                {{ form }}
+                <div class="button-group">
+                    <input type="reset" value="Cancelar" class="btn btn-secondary">
+                    <input type="submit" value="Guardar" class="btn btn-primary">
+                </div>
+            </form>
+            </form>
+        </div>
     </div>
-</div>
+</section>
+
+{% endblock %}
