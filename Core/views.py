@@ -121,6 +121,7 @@ def eliminarP(request, id):
     return redirect('profesores')
 
 
+
 class CustomLoginView(LoginView):
     template_name = 'Core/Login.html'  
     redirect_authenticated_user = True  
