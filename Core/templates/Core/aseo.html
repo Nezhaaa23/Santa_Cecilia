@@ -1,26 +1,55 @@
-{% extends 'Core/Base.html' %}
+{% extends 'Core/index.html' %}
+{% load static %}
 {% block contenido %}
 
-<a href="{% url 'agregarA' %}" class="floating-btn">
-    <button class="custom-btn">Agregar Producto</button>
-</a>
-<p>Elementos de Aseo</p>
-<section class="slots">
-    {% for producto in productos %}
-        <div class="producto-item">
-            <p><strong>Nombre:</strong> {{ producto.nombre_insumo }}</p>
-            <p><strong>Tipo:</strong> {{ producto.tipo_insumo }}</p>
-            <p>
-            <strong>Cantidad:</strong> {{ producto.cantidad_insumo }}
-            <button class="slot__button" onclick="increaseValue('count1')">+</button>
-            <button class="slot__button" onclick="decreaseValue('count1')">-</button>
-            </p>
-            <a href="{% url 'modificarA' id=producto.id_insumo %}" class="btn btn-info btn-sm">Modificar</a>
-            <a href="{% url 'eliminarA' id=producto.id_insumo %}" class="btn btn-danger">Eliminar</a>
-        </div>
-    {% empty %}
-        <p>No hay productos disponibles.</p>
-    {% endfor %}
-</section>
+{% if messages %}
+                <div class="alert alert-success" role="alert">
+                    {% for message in messages %}
+                        {{ message }}
+                    {% endfor %}
+                </div>
+            {% endif %}
 
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Elementos de Aseo</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active"></li>
+    </ol>
+    <div class="row">
+        <div class="card mb-4">
+            <div class="card-header">
+                <a href="{% url 'agregarA' %}" class="floating-btn">
+                    <button class="custom-btn">Agregar Producto</button>
+                </a>
+            </div>
+            <div class="card-body">
+                <table id="aseoTable" class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Tipo</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for producto in productos %}
+                        <tr>
+                            <td>{{ producto.nombre_insumo }}</td>
+                            <td>{{ producto.tipo_insumo }}</td>
+                            <td class="cantidad">{{ producto.cantidad_insumo }}</td> 
+                            <td><a href="{% url 'modificarA' id=producto.id_insumo %}" class="btn btn-info btn-sm" aria-label="Modificar producto {{ producto.nombre_material }}"><i class="fas fa-pencil-alt"></i></a>
+                            <a href="{% url 'eliminarA' id=producto.id_insumo %}" class="btn btn-danger" aria-label="Eliminar producto {{ producto.nombre_material }}"><i class="fas fa-trash-alt"></i></a></td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td colspan="4">No hay productos disponibles.</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

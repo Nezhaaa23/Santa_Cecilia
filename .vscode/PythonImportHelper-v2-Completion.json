@@ -16,6 +16,14 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
@@ -33,6 +41,14 @@
     },
     {
         "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "messages",
         "importPath": "django.contrib",
         "description": "django.contrib",
         "isExtraImport": true,
@@ -56,11 +72,67 @@
         "documentation": {}
     },
     {
+        "label": "forms",
+        "importPath": "django",
+        "description": "django",
+        "isExtraImport": true,
+        "detail": "django",
+        "documentation": {}
+    },
+    {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "post_delete",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "receiver",
+        "importPath": "django.dispatch",
+        "description": "django.dispatch",
+        "isExtraImport": true,
+        "detail": "django.dispatch",
+        "documentation": {}
+    },
+    {
+        "label": "send_mail",
+        "importPath": "django.core.mail",
+        "description": "django.core.mail",
+        "isExtraImport": true,
+        "detail": "django.core.mail",
+        "documentation": {}
+    },
+    {
         "label": "TestCase",
         "importPath": "django.test",
         "description": "django.test",
         "isExtraImport": true,
         "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
+        "documentation": {}
+    },
+    {
+        "label": "LoginView",
+        "importPath": "django.contrib.auth.views",
+        "description": "django.contrib.auth.views",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.views",
         "documentation": {}
     },
     {
@@ -112,11 +184,51 @@
         "documentation": {}
     },
     {
-        "label": "LoginView",
-        "importPath": "django.contrib.auth.views",
-        "description": "django.contrib.auth.views",
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
         "isExtraImport": true,
-        "detail": "django.contrib.auth.views",
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "finders",
+        "importPath": "django.contrib.staticfiles",
+        "description": "django.contrib.staticfiles",
+        "isExtraImport": true,
+        "detail": "django.contrib.staticfiles",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
         "documentation": {}
     },
     {
@@ -187,12 +299,66 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Core.migrations.0002_extraescolar_inteescolar",
+        "description": "Core.migrations.0002_extraescolar_inteescolar",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('Core', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Extraescolar',\n            fields=[\n                ('id_extraescolar', models.AutoField(primary_key=True, serialize=False)),\n                ('nombre_extraescolar', models.CharField(max_length=255)),",
+        "detail": "Core.migrations.0002_extraescolar_inteescolar",
+        "documentation": {}
+    },
+    {
         "label": "CoreConfig",
         "kind": 6,
         "importPath": "Core.apps",
         "description": "Core.apps",
         "peekOfCode": "class CoreConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'Core'",
         "detail": "Core.apps",
+        "documentation": {}
+    },
+    {
+        "label": "computacionForm",
+        "kind": 6,
+        "importPath": "Core.forms",
+        "description": "Core.forms",
+        "peekOfCode": "class computacionForm(forms.ModelForm):\n    class Meta:\n        model=Computacion\n        fields='__all__'\nclass AseoForm(forms.ModelForm):\n    class Meta:\n        model=Aseo\n        fields='__all__'\nclass ProfesoresForm(forms.ModelForm):\n    class Meta:",
+        "detail": "Core.forms",
+        "documentation": {}
+    },
+    {
+        "label": "AseoForm",
+        "kind": 6,
+        "importPath": "Core.forms",
+        "description": "Core.forms",
+        "peekOfCode": "class AseoForm(forms.ModelForm):\n    class Meta:\n        model=Aseo\n        fields='__all__'\nclass ProfesoresForm(forms.ModelForm):\n    class Meta:\n        model=Profesores\n        fields='__all__'\nclass extraescolarForm(forms.ModelForm):\n    class Meta:",
+        "detail": "Core.forms",
+        "documentation": {}
+    },
+    {
+        "label": "ProfesoresForm",
+        "kind": 6,
+        "importPath": "Core.forms",
+        "description": "Core.forms",
+        "peekOfCode": "class ProfesoresForm(forms.ModelForm):\n    class Meta:\n        model=Profesores\n        fields='__all__'\nclass extraescolarForm(forms.ModelForm):\n    class Meta:\n        model=Extraescolar\n        fields='__all__'\nclass inteescolarForm(forms.ModelForm):\n    class Meta:",
+        "detail": "Core.forms",
+        "documentation": {}
+    },
+    {
+        "label": "extraescolarForm",
+        "kind": 6,
+        "importPath": "Core.forms",
+        "description": "Core.forms",
+        "peekOfCode": "class extraescolarForm(forms.ModelForm):\n    class Meta:\n        model=Extraescolar\n        fields='__all__'\nclass inteescolarForm(forms.ModelForm):\n    class Meta:\n        model=InteEscolar\n        fields='__all__'",
+        "detail": "Core.forms",
+        "documentation": {}
+    },
+    {
+        "label": "inteescolarForm",
+        "kind": 6,
+        "importPath": "Core.forms",
+        "description": "Core.forms",
+        "peekOfCode": "class inteescolarForm(forms.ModelForm):\n    class Meta:\n        model=InteEscolar\n        fields='__all__'",
+        "detail": "Core.forms",
         "documentation": {}
     },
     {
@@ -218,7 +384,43 @@
         "kind": 6,
         "importPath": "Core.models",
         "description": "Core.models",
-        "peekOfCode": "class Profesores(models.Model):\n    id_objeto = models.AutoField(primary_key=True)\n    nombre_objeto = models.CharField(max_length=255)\n    cantidad_objeto = models.IntegerField()\n    tipo_producto = models.CharField(max_length=255)\n    def __str__(self):\n        return self.nombre_objeto",
+        "peekOfCode": "class Profesores(models.Model):\n    id_objeto = models.AutoField(primary_key=True)\n    nombre_objeto = models.CharField(max_length=255)\n    cantidad_objeto = models.IntegerField()\n    tipo_producto = models.CharField(max_length=255)\n    def __str__(self):\n        return self.nombre_objeto\nclass Extraescolar(models.Model):\n    id_extraescolar = models.AutoField(primary_key=True)\n    nombre_extraescolar = models.CharField(max_length=255)",
+        "detail": "Core.models",
+        "documentation": {}
+    },
+    {
+        "label": "Extraescolar",
+        "kind": 6,
+        "importPath": "Core.models",
+        "description": "Core.models",
+        "peekOfCode": "class Extraescolar(models.Model):\n    id_extraescolar = models.AutoField(primary_key=True)\n    nombre_extraescolar = models.CharField(max_length=255)\n    cantidad_extraescolar = models.IntegerField()\n    tipo_extraescolar = models.CharField(max_length=255)\n    def __str__(self):\n        return self.nombre_extraescolar\nclass InteEscolar(models.Model):\n    id_inteescolar = models.AutoField(primary_key=True)\n    nombre_inteescolar = models.CharField(max_length=255)",
+        "detail": "Core.models",
+        "documentation": {}
+    },
+    {
+        "label": "InteEscolar",
+        "kind": 6,
+        "importPath": "Core.models",
+        "description": "Core.models",
+        "peekOfCode": "class InteEscolar(models.Model):\n    id_inteescolar = models.AutoField(primary_key=True)\n    nombre_inteescolar = models.CharField(max_length=255)\n    cantidad_inteescolar = models.IntegerField()\n    tipo_inteescolar = models.CharField(max_length=255)\n    def __str__(self):\n        return self.nombre_inteescolar\n@receiver(post_save, sender=Extraescolar)\n@receiver(post_save, sender=InteEscolar)\n@receiver(post_save, sender=Computacion)",
+        "detail": "Core.models",
+        "documentation": {}
+    },
+    {
+        "label": "enviar_notificacion_guardar",
+        "kind": 2,
+        "importPath": "Core.models",
+        "description": "Core.models",
+        "peekOfCode": "def enviar_notificacion_guardar(sender, instance, created, **kwargs):\n    accion = \"creado\" if created else \"actualizado\" ####\n    asunto = f'{sender.__name__} {accion}'\n    mensaje = (\n        f'Se ha {accion} un registro en {sender.__name__}.\\n\\n'\n        f'Nombre: {getattr(instance, \"nombre_material\", None) or getattr(instance, \"nombre_insumo\", None)or getattr(instance, \"nombre_extraescolar\", None)or getattr(instance, \"nombre_inteescolar\", None) or instance.nombre_objeto}\\n'\n        f'Tipo: {getattr(instance, \"tipo_material\", None) or getattr(instance, \"tipo_insumo\", None)or getattr(instance, \"tipo_extraescolar\", None)or getattr(instance, \"tipo_inteescolar\", None) or instance.tipo_producto}\\n'\n        f'Cantidad: {getattr(instance, \"cantidad_material\", None) or getattr(instance, \"cantidad_insumo\", None)or getattr(instance, \"cantidad_extraescolar\", None)or getattr(instance, \"cantidad_inteescolar\", None) or instance.cantidad_objeto}'\n    )\n    remitente = 'santacecilia.direccion@gmail.com'  ",
+        "detail": "Core.models",
+        "documentation": {}
+    },
+    {
+        "label": "enviar_notificacion_eliminacion",
+        "kind": 2,
+        "importPath": "Core.models",
+        "description": "Core.models",
+        "peekOfCode": "def enviar_notificacion_eliminacion(sender, instance, **kwargs):\n    asunto = f'Producto dentro del area {sender.__name__} fue eliminado'\n    mensaje = (\n        f'Se ha eliminado un registro en {sender.__name__}.\\n\\n'\n        f'Nombre: {getattr(instance, \"nombre_material\", None) or getattr(instance, \"nombre_insumo\", None)or getattr(instance, \"nombre_extraescolar\", None)or getattr(instance, \"nombre_inteescolar\", None) or instance.nombre_objeto}\\n'\n        f'Tipo: {getattr(instance, \"tipo_material\", None) or getattr(instance, \"tipo_insumo\", None)or getattr(instance, \"tipo_extraescolar\", None)or getattr(instance, \"tipo_inteescolar\", None) or instance.tipo_producto}\\n'\n        f'Cantidad: {getattr(instance, \"cantidad_material\", None) or getattr(instance, \"cantidad_insumo\", None)or getattr(instance, \"cantidad_extraescolar\", None)or getattr(instance, \"cantidad_inteescolar\", None) or instance.cantidad_objeto}'\n    )\n    remitente = 'santacecilia.direccion@gmail.com'  \n    destinatarios = ['destinatario@gmail.com'] ",
         "detail": "Core.models",
         "documentation": {}
     },
@@ -227,7 +429,7 @@
         "kind": 5,
         "importPath": "Core.urls",
         "description": "Core.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', lambda request: redirect('login/')),  \n    path('login/', CustomLoginView.as_view(), name='Login'),\n    path('base/', Base, name='Base'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', lambda request: redirect('login/')),  \n    path('login/', CustomLoginView.as_view(), name='Login'),\n    path('logout/', LogoutView.as_view(next_page='/login/'), name='Logout'),\n    path('index/',index,name='index'),\n    path('base/', Base, name='Base'),\n    path('aseo/', aseo, name='aseo'),\n    path('agregarA/',agregarA,name='agregarA'),\n    path('modificarA/<int:id>/',modificarA,name='modificarA'),\n    path('eliminarA/<int:id>/',eliminarA,name='eliminarA'),",
         "detail": "Core.urls",
         "documentation": {}
     },
@@ -236,7 +438,52 @@
         "kind": 6,
         "importPath": "Core.views",
         "description": "Core.views",
-        "peekOfCode": "class CustomLoginView(LoginView):\n    template_name = 'Core/Login.html'  # Ruta del formulario de login\n    redirect_authenticated_user = True  # Si el usuario ya está autenticado, redirige a base\n    success_url = reverse_lazy('Base')  # Redirige a 'Base' después del login exitoso",
+        "peekOfCode": "class CustomLoginView(LoginView):\n    template_name = 'Core/Login.html'  \n    redirect_authenticated_user = True  \n    success_url = reverse_lazy('Base')",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "reportes",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def reportes(request):\n    \"\"\"\n    Vista que maneja la página de reportes. Obtiene los objetos de Aseo, Computación y Profesores\n    del modelo y los pasa al template para su visualización.\n    \"\"\"\n    aseo = Aseo.objects.all()\n    computacion = Computacion.objects.all()\n    profesores = Profesores.objects.all()\n    inteescolar=InteEscolar.objects.all()\n    extraescolar=Extraescolar.objects.all()",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "index",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def index(request):\n    return render(request, 'Core/index.html')\ndef aseo(request):\n    \"\"\"\n    Vista que maneja la página de productos de aseo. Obtiene todos los productos de aseo\n    del modelo y los pasa al template para su visualización.\n    \"\"\"\n    productos = Aseo.objects.all()\n    data = {'productos': productos}\n    return render(request, 'Core/aseo.html', data)",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "aseo",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def aseo(request):\n    \"\"\"\n    Vista que maneja la página de productos de aseo. Obtiene todos los productos de aseo\n    del modelo y los pasa al template para su visualización.\n    \"\"\"\n    productos = Aseo.objects.all()\n    data = {'productos': productos}\n    return render(request, 'Core/aseo.html', data)\ndef computacion(request):\n    \"\"\"",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "computacion",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def computacion(request):\n    \"\"\"\n    Vista que maneja la página de productos de computación. Obtiene todos los productos de computación\n    del modelo y los pasa al template para su visualización.\n    \"\"\"\n    productos = Computacion.objects.all()\n    data = {'productos': productos}\n    return render(request, 'Core/computacion.html', data)\ndef profesores(request):\n    \"\"\"",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "profesores",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def profesores(request):\n    \"\"\"\n    Vista que maneja la página de productos de profesores. Obtiene todos los productos de profesores\n    del modelo y los pasa al template para su visualización.\n    \"\"\"\n    productos = Profesores.objects.all()\n    data = {'productos': productos}\n    return render(request, 'Core/profesores.html', data)\ndef Base(request):\n    \"\"\"",
         "detail": "Core.views",
         "documentation": {}
     },
@@ -245,7 +492,214 @@
         "kind": 2,
         "importPath": "Core.views",
         "description": "Core.views",
-        "peekOfCode": "def Base(request):\n    return render(request, 'Core/Base.html')\n# Clase para personalizar el formulario de login\nclass CustomLoginView(LoginView):\n    template_name = 'Core/Login.html'  # Ruta del formulario de login\n    redirect_authenticated_user = True  # Si el usuario ya está autenticado, redirige a base\n    success_url = reverse_lazy('Base')  # Redirige a 'Base' después del login exitoso",
+        "peekOfCode": "def Base(request):\n    \"\"\"\n    Vista que maneja la página base.\n    \"\"\"\n    return render(request, 'Core/Base.html')\ndef inteEscolar(request):\n    productos = InteEscolar.objects.all()\n    data = {'productos': productos}\n    return render(request,'Core/InteEscolar.html',data)\ndef extraescolar(request):",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "inteEscolar",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def inteEscolar(request):\n    productos = InteEscolar.objects.all()\n    data = {'productos': productos}\n    return render(request,'Core/InteEscolar.html',data)\ndef extraescolar(request):\n    productos = Extraescolar.objects.all()\n    data = {'productos': productos}\n    return render(request,'Core/Extraescolar.html',data)\ndef agregar(request):\n    \"\"\"",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "extraescolar",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def extraescolar(request):\n    productos = Extraescolar.objects.all()\n    data = {'productos': productos}\n    return render(request,'Core/Extraescolar.html',data)\ndef agregar(request):\n    \"\"\"\n    Vista que maneja la funcionalidad de agregar un nuevo producto de computación.\n    Utiliza el formulario computacionForm para capturar los datos del nuevo producto.\n    \"\"\"\n    data = {'form': computacionForm}",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "agregar",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def agregar(request):\n    \"\"\"\n    Vista que maneja la funcionalidad de agregar un nuevo producto de computación.\n    Utiliza el formulario computacionForm para capturar los datos del nuevo producto.\n    \"\"\"\n    data = {'form': computacionForm}\n    if request.method == 'POST':\n        formulario = computacionForm(data=request.POST, files=request.FILES)\n        if formulario.is_valid():\n            formulario.save()",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "modificar",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def modificar(request, id):\n    \"\"\"\n    Vista que maneja la funcionalidad de modificar un producto de computación existente.\n    Utiliza el formulario computacionForm para capturar los datos actualizados del producto.\n    \"\"\"\n    producto = get_object_or_404(Computacion, id_material=id)\n    data = {'form': computacionForm(instance=producto)}\n    if request.method == 'POST':\n        formulario = computacionForm(data=request.POST, instance=producto)\n        if formulario.is_valid():",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "eliminar",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def eliminar(request, id):\n    \"\"\"\n    Vista que maneja la funcionalidad de eliminar un producto de computación.\n    Utiliza el id_material del producto para identificarlo y eliminarlo del modelo.\n    \"\"\"\n    producto = get_object_or_404(Computacion, id_material=id)\n    producto.delete()\n    return redirect('computacion')\ndef agregarA(request):\n    \"\"\"",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "agregarA",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def agregarA(request):\n    \"\"\"\n    Vista que maneja la funcionalidad de agregar un nuevo producto de aseo.\n    Utiliza el formulario AseoForm para capturar los datos del nuevo producto.\n    \"\"\"\n    data = {'form': AseoForm}\n    if request.method == 'POST':\n        formulario = AseoForm(data=request.POST, files=request.FILES)\n        if formulario.is_valid():\n            formulario.save()",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "modificarA",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def modificarA(request, id):\n    \"\"\"\n    Vista que maneja la funcionalidad de modificar un producto de aseo existente.\n    Utiliza el formulario AseoForm para capturar los datos actualizados del producto.\n    \"\"\"\n    producto = get_object_or_404(Aseo, id_insumo=id)\n    data = {'form': AseoForm(instance=producto)}\n    if request.method == 'POST':\n        formulario = AseoForm(data=request.POST, instance=producto)\n        if formulario.is_valid():",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "eliminarA",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def eliminarA(request, id):\n    \"\"\"\n    Vista que maneja la funcionalidad de eliminar un producto de aseo.\n    Utiliza el id_insumo del producto para identificarlo y eliminarlo del modelo.\n    \"\"\"\n    producto = get_object_or_404(Aseo, id_insumo=id)\n    producto.delete()\n    return redirect('aseo')\ndef agregarP(request):\n    \"\"\"",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "agregarP",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def agregarP(request):\n    \"\"\"\n    Vista que maneja la funcionalidad de agregar un nuevo producto de profesores.\n    Utiliza el formulario ProfesoresForm para capturar los datos del nuevo producto.\n    \"\"\"\n    data = {'form': ProfesoresForm}\n    if request.method == 'POST':\n        formulario = ProfesoresForm(data=request.POST, files=request.FILES)\n        if formulario.is_valid():\n            formulario.save()",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "modificarP",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def modificarP(request, id):\n    \"\"\"\n    Vista que maneja la funcionalidad de modificar un producto de profesores existente.\n    Utiliza el formulario ProfesoresForm para capturar los datos actualizados del producto.\n    \"\"\"\n    producto = get_object_or_404(Profesores, id_objeto=id)\n    data = {'form': ProfesoresForm(instance=producto)}\n    if request.method == 'POST':\n        formulario = ProfesoresForm(data=request.POST, instance=producto)\n        if formulario.is_valid():",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "eliminarP",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def eliminarP(request, id):\n    \"\"\"\n    Vista que maneja la funcionalidad de eliminar un producto de profesores.\n    Utiliza el id_objeto del producto para identificarlo y eliminarlo del modelo.\n    \"\"\"\n    producto = get_object_or_404(Profesores, id_objeto=id)\n    producto.delete()\n    return redirect('profesores')\ndef agregarI(request):\n    data = {'form': inteescolarForm}",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "agregarI",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def agregarI(request):\n    data = {'form': inteescolarForm}\n    if request.method == 'POST':\n        formulario = inteescolarForm(data=request.POST, files=request.FILES)\n        if formulario.is_valid():\n            formulario.save()\n            messages.success(request, 'Se agrego correctamente')\n            return redirect('InteEscolar')\n        else:\n            data[\"form\"] = formulario",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "modificarI",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def modificarI(request,id):\n    producto = get_object_or_404(InteEscolar, id_inteescolar=id)\n    data = {'form': inteescolarForm(instance=producto)}\n    if request.method == 'POST':\n        formulario = inteescolarForm(data=request.POST, instance=producto)\n        if formulario.is_valid():\n            formulario.save()\n            return redirect('InteEscolar')\n        else:\n            data[\"form\"] = formulario",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "eliminarI",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def eliminarI(request,id):\n    producto = get_object_or_404(InteEscolar, id_inteescolar=id)\n    producto.delete()\n    return redirect('InteEscolar')\ndef agregarE(request):\n    data = {'form': extraescolarForm}\n    if request.method == 'POST':\n        formulario = extraescolarForm(data=request.POST, files=request.FILES)\n        if formulario.is_valid():\n            formulario.save()",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "agregarE",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def agregarE(request):\n    data = {'form': extraescolarForm}\n    if request.method == 'POST':\n        formulario = extraescolarForm(data=request.POST, files=request.FILES)\n        if formulario.is_valid():\n            formulario.save()\n            messages.success(request, 'Se agrego correctamente')\n            return redirect('Extraescolar')\n        else:\n            data[\"form\"] = formulario",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "modificarE",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def modificarE(request,id):\n    producto = get_object_or_404(Extraescolar, id_extraescolar=id)\n    data = {'form': extraescolarForm(instance=producto)}\n    if request.method == 'POST':\n        formulario = extraescolarForm(data=request.POST, instance=producto)\n        if formulario.is_valid():\n            formulario.save()\n            return redirect('Extraescolar')\n        else:\n            data[\"form\"] = formulario",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "eliminarE",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def eliminarE(request,id):\n    producto = get_object_or_404(Extraescolar, id_extraescolar=id)\n    producto.delete()\n    return redirect('Extraescolar')\ndef generar_pdf(request):\n    \"\"\"\n    Genera un reporte PDF con información de los productos de aseo, computación y profesores,\n    asegurando que el contenido no choque con el logo.\n    \"\"\"\n    # Crear una respuesta HttpResponse con el tipo de contenido como PDF",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "generar_pdf",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def generar_pdf(request):\n    \"\"\"\n    Genera un reporte PDF con información de los productos de aseo, computación y profesores,\n    asegurando que el contenido no choque con el logo.\n    \"\"\"\n    # Crear una respuesta HttpResponse con el tipo de contenido como PDF\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=\"reporte.pdf\"'\n    # Crear el objeto Canvas para dibujar el PDF\n    p = canvas.Canvas(response, pagesize=letter)",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "generar_pdf_1",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def generar_pdf_1(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=\"Reporte_Aseo.pdf\"'\n    p = canvas.Canvas(response, pagesize=letter)\n    width, height = letter \n    logo_path = finders.find('Core/img/logo.jpg')\n    logo_width = 100\n    logo_height = 100\n    logo_x = 50\n    logo_y = height - logo_height - 20",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "generar_pdf_2",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def generar_pdf_2(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=\"Reporte_Computacion.pdf\"'\n    p = canvas.Canvas(response, pagesize=letter)\n    width, height = letter \n    logo_path = finders.find('Core/img/logo.jpg')\n    logo_width = 100\n    logo_height = 100\n    logo_x = 50\n    logo_y = height - logo_height - 20",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "generar_pdf_3",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def generar_pdf_3(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=\"Reporte_Profesores.pdf\"'\n    p = canvas.Canvas(response, pagesize=letter)\n    width, height = letter \n    logo_path = finders.find('Core/img/logo.jpg')\n    logo_width = 100\n    logo_height = 100\n    logo_x = 50\n    logo_y = height - logo_height - 20",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "generar_pdf_4",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def generar_pdf_4(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=\"Reporte_Extra_escolares.pdf\"'\n    p = canvas.Canvas(response, pagesize=letter)\n    width, height = letter \n    logo_path = finders.find('Core/img/logo.jpg')\n    logo_width = 100\n    logo_height = 100\n    logo_x = 50\n    logo_y = height - logo_height - 20",
+        "detail": "Core.views",
+        "documentation": {}
+    },
+    {
+        "label": "generar_pdf_5",
+        "kind": 2,
+        "importPath": "Core.views",
+        "description": "Core.views",
+        "peekOfCode": "def generar_pdf_5(request):\n    response = HttpResponse(content_type='application/pdf')\n    response['Content-Disposition'] = 'attachment; filename=\"Reporte_Extra_escolares.pdf\"'\n    p = canvas.Canvas(response, pagesize=letter)\n    width, height = letter \n    logo_path = finders.find('Core/img/logo.jpg')\n    logo_width = 100\n    logo_height = 100\n    logo_x = 50\n    logo_y = height - logo_height - 20",
         "detail": "Core.views",
         "documentation": {}
     },
@@ -263,7 +717,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-mao0ln_18-&c0kwa6!75m9n94xo2jj(nqv=%l-2v*y58mz@k4^'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-mao0ln_18-&c0kwa6!75m9n94xo2jj(nqv=%l-2v*y58mz@k4^'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\nLOGIN_URL = '/login/'\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -272,7 +726,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-mao0ln_18-&c0kwa6!75m9n94xo2jj(nqv=%l-2v*y58mz@k4^'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión\n# Application definition\nINSTALLED_APPS = [\n    \"admin_interface\",\n    \"colorfield\",",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-mao0ln_18-&c0kwa6!75m9n94xo2jj(nqv=%l-2v*y58mz@k4^'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\nLOGIN_URL = '/login/'\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión\n# Application definition\nINSTALLED_APPS = [\n    \"admin_interface\",",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -281,7 +735,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión\n# Application definition\nINSTALLED_APPS = [\n    \"admin_interface\",\n    \"colorfield\",\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\nLOGIN_URL = '/login/'\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión\n# Application definition\nINSTALLED_APPS = [\n    \"admin_interface\",\n    \"colorfield\",\n    'django.contrib.admin',",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -290,7 +744,16 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión\n# Application definition\nINSTALLED_APPS = [\n    \"admin_interface\",\n    \"colorfield\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
+        "peekOfCode": "ALLOWED_HOSTS = []\nLOGIN_URL = '/login/'\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión\n# Application definition\nINSTALLED_APPS = [\n    \"admin_interface\",\n    \"colorfield\",\n    'django.contrib.admin',\n    'django.contrib.auth',",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGIN_URL",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "LOGIN_URL = '/login/'\nLOGIN_REDIRECT_URL = '/base/'  # Ruta después de iniciar sesión\nLOGOUT_REDIRECT_URL = '/login/'  # Ruta después de cerrar sesión\n# Application definition\nINSTALLED_APPS = [\n    \"admin_interface\",\n    \"colorfield\",\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -398,7 +861,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'es'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core/Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")",
+        "peekOfCode": "LANGUAGE_CODE = 'es'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n#Configuraciones para el proyecto#\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core\" / \"Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -407,7 +870,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core/Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n#Configuraciones para el proyecto#\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core\" / \"Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -416,7 +879,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core/Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n#Configuraciones para el proyecto#\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core\" / \"Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -425,7 +888,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "USE_TZ = True\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core/Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "USE_TZ = True\n#Configuraciones para el proyecto#\nimport os\nSTATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core\" / \"Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Configuración de correo electrónico",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -434,7 +897,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core/Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATICFILES_DIRS = [BASE_DIR / \"Core\" / \"Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Configuración de correo electrónico\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com' \nEMAIL_PORT = 587 ",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -443,7 +906,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / \"Core/Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATICFILES_DIRS = [BASE_DIR / \"Core\" / \"Static\"]\nSTATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Configuración de correo electrónico\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com' \nEMAIL_PORT = 587 \nEMAIL_USE_TLS = True ",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -452,7 +915,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "STATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "STATIC_ROOT = BASE_DIR / \"staticfiles\"\nMEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Configuración de correo electrónico\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com' \nEMAIL_PORT = 587 \nEMAIL_USE_TLS = True \nEMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  ",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -461,7 +924,7 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "MEDIA_URL = '/media/'\nMEDIA_ROOT= os.path.join(BASE_DIR,\"media\")\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Configuración de correo electrónico\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com' \nEMAIL_PORT = 587 \nEMAIL_USE_TLS = True \nEMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  \nEMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' ",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },
@@ -470,7 +933,70 @@
         "kind": 5,
         "importPath": "Santa_Cecilia.settings",
         "description": "Santa_Cecilia.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Configuración de correo electrónico\nEMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com' \nEMAIL_PORT = 587 \nEMAIL_USE_TLS = True \nEMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  \nEMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' \nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_BACKEND",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'\nEMAIL_HOST = 'smtp.gmail.com' \nEMAIL_PORT = 587 \nEMAIL_USE_TLS = True \nEMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  \nEMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' \nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "EMAIL_HOST = 'smtp.gmail.com' \nEMAIL_PORT = 587 \nEMAIL_USE_TLS = True \nEMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  \nEMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' \nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PORT",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "EMAIL_PORT = 587 \nEMAIL_USE_TLS = True \nEMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  \nEMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' \nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_USE_TLS",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "EMAIL_USE_TLS = True \nEMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  \nEMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' \nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_USER",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "EMAIL_HOST_USER = 'santacecilia.direccion@gmail.com'  \nEMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' \nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_HOST_PASSWORD",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "EMAIL_HOST_PASSWORD = 'zwpy cowy dxzv funm' \nDEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
+        "detail": "Santa_Cecilia.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_FROM_EMAIL",
+        "kind": 5,
+        "importPath": "Santa_Cecilia.settings",
+        "description": "Santa_Cecilia.settings",
+        "peekOfCode": "DEFAULT_FROM_EMAIL = EMAIL_HOST_USER",
         "detail": "Santa_Cecilia.settings",
         "documentation": {}
     },

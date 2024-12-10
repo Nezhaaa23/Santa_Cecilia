@@ -1,53 +1,69 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    {% load static %} 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Inventario</title>
-    <link rel="stylesheet" href="{% static 'Core/css/styles.css' %}?v=1">
-</head>
-<body>
-    <header>
-        <div class="banner">
-            <h1>Bienvenido al Gestor de Inventario</h1>
-        </div>
+{% extends 'Core/index.html' %}
+{% load static %}
 
-        <div class="container container--flex">
-            <a href="/" class="logo">
-                <img src="{% static 'Core/img/Logo2.png' %}" alt="Logo" class="logo__image">
-            </a>
-            <span class="icon-menu" id="btnmenu"></span>
-            <ul class="menu" id="menu">
-                <li class="menu__item"><a href="{% url 'Base' %}" class="menu__link menu__link--select">Inicio</a></li>
-                {% if perms.Core.view_aseo %}
-                <li class="menu__item"><a href="{% url 'aseo' %}" class="menu__link">Aseo</a></li>
-                {% endif %}
-                {% if perms.Core.view_profesores %}
-                <li class="menu__item"><a href="{% url 'profesores' %}" class="menu__link">Profesores</a></li>
-                {% endif %}
-                {% if perms.Core.view_computacion %}
-                <li class="menu__item"><a href="{% url  'computacion' %}" class="menu__link">Computación</a></li>
-                {% endif %}
-                <form action="{% url 'Logout' %}" method="POST">
-                    {% csrf_token %}
-                    <button type="submit" class="logout__button">Cerrar Sesión</button>
-                </form>
-            </ul>
-            <!-- Esta wea no se ve reflejada en el codigo, no lo saques ya que hace que las categorias esten centradas -->
-            <div class="social-icon">
-                <a href="https://www.facebook.com/Treyarch/?locale=es_LA" class="social-icon__link"><span class="icon-facebook"></span></a>
-                <a href="https://x.com/Treyarch?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon__link"><span class="icon-twitter"></span></a>
-                <a href="https://www.instagram.com/treyarch/" class="social-icon__link"><span class="icon-instagram"></span></a>
+{% block contenido %}
+<div class="container-fluid px-4">
+
+    <h1 class="mt-4">Sistema de inventario Colegio Santa Cecilia</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">
+            Guía paso a paso para utilizar todas las funcionalidades del sistema
+        </li>
+    </ol>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h2 class="mb-0">Introducción</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Bienvenido al <strong>Sistema de Inventario</strong>. Esta herramienta está diseñada para facilitar 
+                        la gestión de productos, reportes y control de stock en tiempo real. A continuación, se explica 
+                        cómo utilizar cada una de las funcionalidades del sistema de manera eficiente.
+                    </p>
+                </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0">Gestión de Inventario</h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        En esta sección puedes agregar, editar y eliminar productos del inventario. Sigue las instrucciones:
+                    </p>
+                    <ul>
+                        <li>Accede al menú principal y selecciona la opción <strong>"Inventario"</strong>.</li>
+                        <li>Para <strong>agregar un producto</strong>, haz clic en el botón <em>"Agregar Producto"</em>.</li>
+                        <li>Rellena los campos requeridos:
+                            <ul>
+                                <li><strong>Nombre:</strong> Identificación del producto.</li>
+                                <li><strong>Cantidad:</strong> Número de unidades disponibles.</li>
+                            </ul>
+                        </li>
+                        <li>Para <strong>editar o eliminar</strong> un producto, utiliza los botones correspondientes junto a cada ítem.</li>
+                    </ul>
+            </div>
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="mb-0">Soporte y Consejos</h3>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Si necesitas ayuda adicional o encuentras algún inconveniente, contáctanos:
+                    </p>
+                    <ul>
+                        <li><strong>Email:</strong> <a href="mailto:santacecilia.direccion@gmail.com">santacecilia.direccion@gmail.com</a></li>
+                        <li><strong>Teléfono: ------</strong></li>
+                        <li><strong>Horario de atención:</strong> Lunes a Viernes, 8:00 a.m. - 6:00 p.m.</li>
+                    </ul>
+                    <p class="mt-3">
+                        <em>¡Gracias por usar nuestro Sistema de Inventario!</em>
+                    </p>
+                </div>
             </div>
         </div>
-    </header>
-    <main>
-        {% block contenido %}
-        {% endblock %}
-    </main>
-    <footer>
-        <p>© 2024 Inventario Escolar</p>
-    </footer>
-</body>
-</html>
+    </div>
+</div>
+{% endblock %}

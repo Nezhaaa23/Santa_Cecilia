@@ -1,5 +1,106 @@
-{% extends 'Core/Base.html' %}
+{% extends 'Core/index.html' %}
+{% load static %}
 {% block contenido %}
+
+<style>
+.slots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8; 
+    padding: 30px;
+}
+
+.card {
+    width: 100%;
+    max-width: 600px; 
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    box-sizing: border-box;
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.07); 
+}
+
+.card-body {
+    padding: 0;
+}
+
+.form-centered {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input[type="reset"], input[type="submit"] {
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    background-color: #ffffff;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover {
+    opacity: 0.8;
+    background-color: #f1f1f1;
+    transform: translateY(-2px); 
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    width: 100%;
+}
+
+input[type="text"]:not(:last-child), input[type="email"]:not(:last-child), input[type="password"]:not(:last-child), select:not(:last-child), textarea:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+</style>
 
 <section class="slots">
     <div class="card">
@@ -11,7 +112,6 @@
                     <input type="reset" value="Cancelar" class="btn btn-secondary">
                     <input type="submit" value="Guardar" class="btn btn-primary">
                 </div>
-            </form>
             </form>
         </div>
     </div>
